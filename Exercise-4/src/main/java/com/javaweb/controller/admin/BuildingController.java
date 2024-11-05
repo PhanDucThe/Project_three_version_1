@@ -2,11 +2,13 @@ package com.javaweb.controller.admin;
 
 
 
+import com.javaweb.entity.BuildingEntity;
 import com.javaweb.enums.District;
 import com.javaweb.enums.TypeCode;
 import com.javaweb.model.dto.BuildingDTO;
 import com.javaweb.model.request.BuildingSearchRequest;
 import com.javaweb.model.response.BuildingSearchResponse;
+import com.javaweb.repository.IBuildingRepository;
 import com.javaweb.service.IBuildingService;
 import com.javaweb.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +32,13 @@ public class BuildingController {
     @Autowired
     private IBuildingService iBuildingService;
 
+    @Autowired
+    private IBuildingRepository iBuildingRepository;
+
     @GetMapping(value = "/admin/building-list")
     public ModelAndView buildingList(@ModelAttribute BuildingSearchRequest buildingSearchRequest, HttpServletRequest request) {
         ModelAndView mav = new ModelAndView("admin/building/list");
+
         mav.addObject("modelSearch", buildingSearchRequest);
         List<BuildingSearchResponse> result = new ArrayList<>();
         result = iBuildingService.getAllBuilding(buildingSearchRequest);
@@ -56,11 +62,11 @@ public class BuildingController {
     @GetMapping(value = "/admin/building-edit-{id}")
     public ModelAndView buildingEdit(@PathVariable("id") Long id, HttpServletRequest request) {
         ModelAndView mav = new ModelAndView("admin/building/edit");
-        // Xuong DB lay du lieu len Theo Id de sua
-        BuildingDTO DTO = new BuildingDTO();
-        DTO.setId(id);
-        DTO.setName("Duc The");
-        mav.addObject("buildingEdit", DTO);
+        // Xuong DB lay du lieu len Theo De Nguoi dung Thay vao Sua.
+
+        BuildingEntity building = iBuildingRepository.findById(id).get();
+
+        mav.addObject("buildingEdit", building);
         return mav;
     }
 }

@@ -37,7 +37,7 @@
                                 <label>Tên Toà Nhà</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="name" value="">
+                                <form:input tyle="width: 100%;" path="name"></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -45,11 +45,11 @@
                                 <label>Quận</label>
                             </div>
                             <div class="col-xs-4">
-                                <select style="width: 100%;" name="districtid">
+                                <select style="width: 100%;" name="district">
                                     <option value="">---Chọn Quận</option>
-                                    <option value="1">Quận 1</option>
-                                    <option value="2">Quận 2</option>
-                                    <option value="3">Quận 3</option>
+                                    <option value="QUAN_1">Quận 1</option>
+                                    <option value="QUAN_2">Quận 2</option>
+                                    <option value="QUAN_4">Quận 4</option>
                                 </select>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                 <label>Phường</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="ward" value="">
+                                <form:input style="width: 100%;" path="ward" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -66,7 +66,7 @@
                                 <label>Đường</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="street" value="">
+                                 <form:input style="width: 100%;" path="street" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -74,7 +74,7 @@
                                 <label>Kết cấu</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="structure" value="">
+                                <form:input style="width: 100%;" path="structure" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -82,15 +82,16 @@
                                 <label>Số tầng hầm</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;" name="numberofbasement" value="">
+                                <form:input style="width: 100%;" path="numberOfBasement" ></form:input>
                             </div>
                         </div>
-                        <div class="row" style="margin-bottom: 10px;">
+                        <div class="row">
                             <div class="col-xs-3">
                                 <label>Diện tích sàn</label>
                             </div>
-                            <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="floorarea" value="">
+                            <div class="col-xs-9" style="margin-bottom: 10px">
+                                <form:input style="width: 100%;" path="floorArea" ></form:input>
+                                <br>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -98,7 +99,8 @@
                                 <label>Hướng</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="direction" value="">
+                                <form:input style="width: 100%;" path="direction" ></form:input>
+                                <br>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -106,7 +108,7 @@
                                 <label>Hạng</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;" name="level" value="">
+                                <form:input style="width: 100%;" path="level" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -114,7 +116,7 @@
                                 <label>Diện tích thuê</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="areaprice" value="">
+                                <input type="text" style="width: 100%;" name="rentArea" value="">
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -122,7 +124,7 @@
                                 <label>Giá thuê</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;" name="rentprice" value="">
+                                <form:input style="width: 100%;" path="rentPrice" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -130,7 +132,7 @@
                                 <label>Mô tả giá</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="rentpricedescription" value="">
+                                <form:input style="width: 100%;" path="rentPriceDescription" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -138,7 +140,7 @@
                                 <label>Phí dịch vụ</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;" name="servicefee" value="">
+                                <form:input style="width: 100%;" path="serviceFee" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -146,7 +148,7 @@
                                 <label>Phí ô tô</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;" name="carfee" value="">
+                                <form:input style="width: 100%;" path="carFee" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -154,7 +156,7 @@
                                 <label>Phí mô tô</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;" name="motorbikefee" value="">
+                                <form:input style="width: 100%;" path="motoFee" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -162,7 +164,7 @@
                                 <label>Phí ngoài giờ</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;" name="overtimefee" value="">
+                                <form:input style="width: 100%;" path="overtimeFee" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -170,7 +172,7 @@
                                 <label>Tiền điện</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;" name="electricityfee">
+                                <form:input style="width: 100%;" path="electricityFee" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -178,7 +180,7 @@
                                 <label>Tiền cọc</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;">
+                                <form:input style="width: 100%;" path="deposit" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -186,7 +188,7 @@
                                 <label>Thanh toán</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;">
+                                <form:input style="width: 100%;" path="payment" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -194,7 +196,7 @@
                                 <label>Thời hạn thuê</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;">
+                                <form:input style="width: 100%;" path="rentTime" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -202,7 +204,7 @@
                                 <label>Thời gian trang trí</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;">
+                                <form:input style="width: 100%;" path="decorationTime" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -210,7 +212,7 @@
                                 <label>Tên quản lý</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="managername" value="">
+                                <form:input style="width: 100%;" path="managerName" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -218,7 +220,7 @@
                                 <label>SĐT quản lý</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;" name="managerphonenumber" value="">
+                                <form:input style="width: 100%;" path="managerPhone" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -226,7 +228,7 @@
                                 <label>Phí mua giới</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="number" style="width: 100%;" name="brokeragefee" value="">
+                                <form:input style="width: 100%;" path="brokerageFee" ></form:input>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -234,9 +236,9 @@
                                 <label>Loại toà nhà</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="checkbox" name="typeCode" value="noi-that"> <span style="margin-right: 30px;">Nội thất</span>
-                                <input type="checkbox" name="typeCode" value="tang-tret"> <span style="margin-right: 30px;">Tầng trệt</span>
-                                <input type="checkbox" name="typeCode" value="nguyen-can"> <span style="margin-right: 30px;">Nguyên căn</span>
+                                <input type="checkbox" name="typeCode" value="NOI_THAT"> <span style="margin-right: 30px;">Nội thất</span>
+                                <input type="checkbox" name="typeCode" value="TANG_TRET"> <span style="margin-right: 30px;">Tầng trệt</span>
+                                <input type="checkbox" name="typeCode" value="NGUYEN_CAN"> <span style="margin-right: 30px;">Nguyên căn</span>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 10px;">
@@ -244,7 +246,7 @@
                                 <label>Ghi chú</label>
                             </div>
                             <div class="col-xs-9">
-                                <input type="text" style="width: 100%;">
+                                <input type="text" style="width: 100%;" name="note" value="">
                             </div>
                         </div>
                         <form:hidden path="id" id="BuildingID"></form:hidden>
@@ -301,8 +303,8 @@
             // Dung Ajax de call API
             function  addOrUpdateBuilding(data) {
                 $.ajax({
-                    url:"/api/building",
-                    method: "POST",
+                    url:"/api/building/update",
+                    method: "PUT",
                     data: JSON.stringify(data),
                     contentType: "application/json",
                     dataType: "JSON",

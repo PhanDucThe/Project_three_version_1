@@ -1,110 +1,38 @@
 package com.javaweb.model.dto;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class BuildingDTO extends AbstractDTO{
-    private Long id;
     private String name;
     private String street;
     private String ward;
     private String district;
+    private String structure;
     private Long numberOfBasement;
     private Long floorArea;
+    private String direction;
     private String level;
-    private List<String> typeCode;
+    private Long rentPrice;
+    private String rentPriceDescription;
+    private String serviceFee;
+    private String carFee;
+    private String motoFee;
     private String overtimeFee;
+    private String waterFee;
     private String electricityFee;
     private String deposit;
     private String payment;
     private String rentTime;
     private String decorationTime;
-    private String rentPriceDescription;
-    private String carFee;
-    private String motoFee;
-    private String structure;
-    private String direction;
+    private Double brokerageFee;
+    private List<String> typeCode = new ArrayList<String>();
     private String note;
-    private String rentArea;
+    private String linkOfBuilding;
+    private String map;
+    private String avatar;
     private String managerName;
     private String managerPhone;
-    private Long rentPrice;
-    private String serviceFee;
-    private double brokerageFee;
-    private String image;
-    private String imageBase64;
-    private String imageName;
-
-    private Map<String,String> buildingDTOs = new HashMap<>();
-
-    public Map<String, String> getBuildingDTOs() {
-        return buildingDTOs;
-    }
-
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
-    }
-
-    public void setBuildingDTOs(Map<String, String> buildingDTOs) {
-        this.buildingDTOs = buildingDTOs;
-    }
-
-    public String getDirection() {
-        return direction;
-    }
-
-    public void setDirection(String direction) {
-        this.direction = direction;
-    }
-
-    public String getStructure() {
-        return structure;
-    }
-
-
-    public void setStructure(String structure) {
-        this.structure = structure;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getImageBase64() {
-        if (imageBase64 != null) {
-            return imageBase64.split(",")[1];
-        }
-        return null;
-    }
-
-    public void setImageBase64(String imageBase64) {
-        this.imageBase64 = imageBase64;
-    }
-
-    public String getImageName() {
-        return imageName;
-    }
-
-    public void setImageName(String imageName) {
-        this.imageName = imageName;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -112,38 +40,6 @@ public class BuildingDTO extends AbstractDTO{
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getRentArea() {
-        return rentArea;
-    }
-
-    public void setRentArea(String rentArea) {
-        this.rentArea = rentArea;
-    }
-
-    public Long getFloorArea() {
-        return floorArea;
-    }
-
-    public void setFloorArea(Long floorArea) {
-        this.floorArea = floorArea;
-    }
-
-    public Long getNumberOfBasement() {
-        return numberOfBasement;
-    }
-
-    public void setNumberOfBasement(Long numberOfBasement) {
-        this.numberOfBasement = numberOfBasement;
-    }
-
-    public List<String> getTypeCode() {
-        return typeCode;
-    }
-
-    public void setTypeCode(List<String> typeCode) {
-        this.typeCode = typeCode;
     }
 
     public String getStreet() {
@@ -170,36 +66,36 @@ public class BuildingDTO extends AbstractDTO{
         this.district = district;
     }
 
-    public String getManagerName() {
-        return managerName;
+    public String getStructure() {
+        return structure;
     }
 
-    public void setManagerName(String managerName) {
-        this.managerName = managerName;
+    public void setStructure(String structure) {
+        this.structure = structure;
     }
 
-    public String getManagerPhone() {
-        return managerPhone;
+    public Long getNumberOfBasement() {
+        return numberOfBasement;
     }
 
-    public void setManagerPhone(String managerPhone) {
-        this.managerPhone = managerPhone;
+    public void setNumberOfBasement(Long numberOfBasement) {
+        this.numberOfBasement = numberOfBasement;
     }
 
-    public String getServiceFee() {
-        return serviceFee;
+    public Long getFloorArea() {
+        return floorArea;
     }
 
-    public void setServiceFee(String serviceFee) {
-        this.serviceFee = serviceFee;
+    public void setFloorArea(Long floorArea) {
+        this.floorArea = floorArea;
     }
 
-    public double getBrokerageFee() {
-        return brokerageFee;
+    public String getDirection() {
+        return direction;
     }
 
-    public void setBrokerageFee(double brokerageFee) {
-        this.brokerageFee = brokerageFee;
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
 
     public String getLevel() {
@@ -210,12 +106,28 @@ public class BuildingDTO extends AbstractDTO{
         this.level = level;
     }
 
+    public Long getRentPrice() {
+        return rentPrice;
+    }
+
+    public void setRentPrice(Long rentPrice) {
+        this.rentPrice = rentPrice;
+    }
+
     public String getRentPriceDescription() {
         return rentPriceDescription;
     }
 
     public void setRentPriceDescription(String rentPriceDescription) {
         this.rentPriceDescription = rentPriceDescription;
+    }
+
+    public String getServiceFee() {
+        return serviceFee;
+    }
+
+    public void setServiceFee(String serviceFee) {
+        this.serviceFee = serviceFee;
     }
 
     public String getCarFee() {
@@ -240,6 +152,14 @@ public class BuildingDTO extends AbstractDTO{
 
     public void setOvertimeFee(String overtimeFee) {
         this.overtimeFee = overtimeFee;
+    }
+
+    public String getWaterFee() {
+        return waterFee;
+    }
+
+    public void setWaterFee(String waterFee) {
+        this.waterFee = waterFee;
     }
 
     public String getElectricityFee() {
@@ -274,6 +194,14 @@ public class BuildingDTO extends AbstractDTO{
         this.rentTime = rentTime;
     }
 
+    public Double getBrokerageFee() {
+        return brokerageFee;
+    }
+
+    public void setBrokerageFee(Double brokerageFee) {
+        this.brokerageFee = brokerageFee;
+    }
+
     public String getDecorationTime() {
         return decorationTime;
     }
@@ -282,11 +210,59 @@ public class BuildingDTO extends AbstractDTO{
         this.decorationTime = decorationTime;
     }
 
-    public Long getRentPrice() {
-        return rentPrice;
+    public List<String> getTypeCode() {
+        return typeCode;
     }
 
-    public void setRentPrice(Long rentPrice) {
-        this.rentPrice = rentPrice;
+    public void setTypeCode(List<String> typeCode) {
+        this.typeCode = typeCode;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public String getLinkOfBuilding() {
+        return linkOfBuilding;
+    }
+
+    public void setLinkOfBuilding(String linkOfBuilding) {
+        this.linkOfBuilding = linkOfBuilding;
+    }
+
+    public String getMap() {
+        return map;
+    }
+
+    public void setMap(String map) {
+        this.map = map;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getManagerName() {
+        return managerName;
+    }
+
+    public void setManagerName(String managerName) {
+        this.managerName = managerName;
+    }
+
+    public String getManagerPhone() {
+        return managerPhone;
+    }
+
+    public void setManagerPhone(String managerPhone) {
+        this.managerPhone = managerPhone;
     }
 }

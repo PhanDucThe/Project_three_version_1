@@ -9,4 +9,5 @@ public interface UserRepositoryCustom {
 	List<UserEntity> findByRole(String roleCode);
 	List<UserEntity> getAllUsers(Pageable pageable);
 	int countTotalItem();
+	List<UserEntity> findByAssmentBuildingAndBuilding(Long buildingId);
 }

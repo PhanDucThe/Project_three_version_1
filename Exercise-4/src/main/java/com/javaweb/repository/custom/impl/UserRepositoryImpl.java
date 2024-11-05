@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import java.util.Collections;
 import java.util.List;
 
 @Repository
@@ -41,6 +42,26 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
 		String sql = buildQueryFilter();
 		Query query = entityManager.createNativeQuery(sql.toString());
 		return query.getResultList().size();
+	}
+
+
+	public void joinTable(StringBuilder sql) {
+		sql.append(" INNER JOIN assignmentbuilding ON user.id = assignmentbuilding.staffid ");
+		sql.append(" INNER JOIN building ON building.id = assignmentbuilding.buildingid ");
+	}
+
+	public void querySpecial(StringBuilder sql, Long id) {
+		sql.append(" WHERE building.id = " + id + " ");
+	}
+
+	@Override
+	public List<UserEntity> findByAssmentBuildingAndBuilding(Long buildingId) {
+		StringBuilder sql = new StringBuilder(" SELECT DISTINCT * FROM user ");
+		joinTable(sql);
+		querySpecial(sql, buildingId);
+
+		Query query = entityManager.createNativeQuery(sql.toString(), UserEntity.class);
+		return query.getResultList();
 	}
 
 	private String buildQueryFilter() {

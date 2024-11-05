@@ -7,6 +7,7 @@ import com.javaweb.model.dto.UserDTO;
 import com.javaweb.entity.RoleEntity;
 import com.javaweb.entity.UserEntity;
 import com.javaweb.exception.MyException;
+import com.javaweb.model.response.ResponseDTO;
 import com.javaweb.repository.RoleRepository;
 import com.javaweb.repository.UserRepository;
 import com.javaweb.service.IUserService;
@@ -186,4 +187,10 @@ public class UserService implements IUserService {
             userRepository.save(userEntity);
         }
     }
+
+    @Override
+    public ResponseDTO listStaff(Long buildingId) {
+        return null;
+    }
+
 }

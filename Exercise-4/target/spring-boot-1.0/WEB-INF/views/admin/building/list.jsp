@@ -265,7 +265,8 @@
 
                         </tbody>
                     </table>
-                    <input type="hidden" id="buildingId" name="Building" value="1">
+<%--                    <input type="hidden" id="buildingId" name="Building" value="">--%>
+                    <input type="hidden" id="buildingId">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" id="btnassignmentBuilding">Giao toà
@@ -279,9 +280,11 @@
 
     <script>
         function assignmentBuilding(buildingId) {
+
+            document.getElementById("buildingId").value = buildingId;
             $('#assignmentBuildingmyModal').modal();
             loadStaff(buildingId);
-            $('#buildingId').val();
+            // $('#buildingId').val();
         }
 
         function loadStaff(buildingId) {

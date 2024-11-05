@@ -31,7 +31,7 @@ public class BuildingSearchConverter {
         }
 
         List<RentAreaEntity> rentAreaEntity = new ArrayList<>();
-        rentAreaEntity = buildingEntity.getRentAreaEntityList();
+        rentAreaEntity = buildingEntity.getRentAreaEntity();
         List<String> str = new ArrayList<>();
         for (RentAreaEntity rentAreaEntity1 : rentAreaEntity) {
             str.add("" + rentAreaEntity1.getValue() + "");
